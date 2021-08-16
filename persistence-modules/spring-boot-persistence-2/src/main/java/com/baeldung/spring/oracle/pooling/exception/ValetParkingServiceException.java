@@ -1,6 +1,6 @@
 package com.baeldung.spring.oracle.pooling.exception;
 
-public class BookstoreException extends Exception{
+public class ValetParkingServiceException extends Exception{
 
 	/**
 	 * 

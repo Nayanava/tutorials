@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.baeldung.spring.oracle.pooling.entity.Book;
-import com.baeldung.spring.oracle.pooling.exception.BookstoreException;
+import com.baeldung.spring.oracle.pooling.exception.ValetParkingServiceException;
 import com.baeldung.spring.oracle.pooling.repository.BookRepository;
 
 @RestController
@@ -37,9 +37,9 @@ public class BookstoreController {
     }
 
     @GetMapping("/get/{id}")
-    public Book findOne(@PathVariable Long id) throws BookstoreException {
+    public Book findOne(@PathVariable Long id) throws ValetParkingServiceException {
         return repository.findById(id)
-            .orElseThrow(BookstoreException::new);
+            .orElseThrow(ValetParkingServiceException::new);
     }
 
 }
